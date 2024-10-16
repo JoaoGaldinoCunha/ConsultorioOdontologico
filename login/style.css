@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+section{
+    background-image: url('../assets/img/consultorio_fundo.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+section div{
+    background-color: #FFF8F8;
+    width: 80%;
+    height: 90%;
+    border-radius: 20px;
+}
