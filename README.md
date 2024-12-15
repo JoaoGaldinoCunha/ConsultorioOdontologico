@@ -26,7 +26,6 @@ git clone https://github.com/seu-usuario/dental-clinic-login.git
 ├── assets
 │   ├── css
 │   │   └── style.css
-│   ├── img
 │   │   └── consultorio_fundo.svg
 ├── index.html
 └── README.md
