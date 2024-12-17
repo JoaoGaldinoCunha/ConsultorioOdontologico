@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
 * {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -16,6 +20,7 @@ img {
 body {
     height: 100%;
     width: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
 section {
@@ -23,11 +28,11 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .general_conteiner {
@@ -37,19 +42,22 @@ section {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .logo_name {
-    margin-left: 5%;
-    margin-top: 5%;
     display: flex;
     align-items: center;
+    margin-top: 5%;
+    margin-left: 5%;
 }
 
 .logo_name h1 {
     color: #F49FC8;
-    font-weight: bolder;
     font-family: "Red Hat Display", sans-serif;
+    font-weight: bolder;
     padding-left: 1%;
 }
 
@@ -57,31 +65,39 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    width: 40%;
     margin-left: 5%;
     text-align: justify;
-    padding: 0 2%;
 }
 
 form h1 {
     font-size: 30px;
-    font-family: "Poppins", sans-serif;
     font-weight: bold;
     color: #F49FC8;
 }
 
 form p {
     font-size: 16px;
-    font-weight: 500;
-    margin: 3% 0% 5% 0%;
     font-weight: 200;
+    margin: 2% 0 8%;
     font-family: "Poppins", sans-serif;
+}
+
+.back_login {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.back_img {
+    cursor: pointer;
 }
 
 .group {
@@ -89,20 +105,21 @@ form p {
     line-height: 30px;
     align-items: center;
     position: relative;
-    margin: 0% 0% 2% 0%;
+    margin-bottom: 3%;
 }
 
 .input {
     width: 130%;
     height: 45px;
-    padding: 0 5rem;
+    line-height: 30px;
     padding-left: 3rem;
+    padding-right: 5rem;
     border: 2px solid transparent;
     border-radius: 10px;
     outline: none;
     background-color: #dfe6ec;
     color: #0d0c22;
-    transition: .5s ease;
+    transition: 0.5s ease;
 }
 
 .input::placeholder {
@@ -110,8 +127,7 @@ form p {
 }
 
 .input:focus,
-input:hover {
-    outline: none;
+.input:hover {
     border-color: #F49FC8;
     background-color: #fff;
     box-shadow: 0 0 0 5px #F49FC8;
@@ -125,23 +141,14 @@ input:hover {
     height: 1rem;
 }
 
-.remeber_password {
-    margin: 10px 0px 25px 0px;
-    color: #F49FC8;
-    font-weight: 400;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-}
-
 .conteiner_button {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.conteiner_button .dont_have_account {
-    font-weight: 400;
+.dont_have_account {
+    font-weight: 500;
     font-size: 16px;
     font-family: "Poppins", sans-serif;
 }
@@ -153,7 +160,7 @@ button {
     border-radius: 4px;
     width: 100%;
     height: 50px;
-    border-style: none;
+    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -169,198 +176,188 @@ button:hover {
 
 span {
     color: #F49FC8;
-    font-weight: 400;
+    font-weight: 600;
     cursor: pointer;
-    font-family: "Poppins", sans-serif;
     font-size: 16px;
 }
 
 .imagem_lateral {
-    width: 50%;
-    height: auto;
+    width: 70%;
+    height: 70%;
+}
+
+@media (max-width: 1200px) {
+    .general_conteiner {
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo_name {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .conteiner_content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagem_lateral {
+        display: none;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .conteiner_button {
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 768px) {
     .general_conteiner {
         width: 90%;
-        height: 90%;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     .logo_name {
-        margin-top: 3%;
-        margin-left: 0;
-        justify-content: center;
-    }
-
-    .logo_name h1 {
-        font-size: 24px;
-    }
-
-    .conteiner_content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        margin-top: 10%;
+        margin-bottom: 5%;
     }
 
     form {
-        margin-left: 0;
-        margin-top: 20px;
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    form h1 {
+        font-size: 30px;
+    }
+
+    form p {
+        font-size: 14px;
     }
 
     .input {
-        width: 100%;
-        padding: 0 1.5rem;
-        font-size: 16px;
+        width: 80%;
+        padding-left: 2rem;
     }
 
     .imagem_lateral {
-        width: 70%;
+        display: none;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .conteiner_button {
         margin-top: 20px;
-    }
-
-    button {
-        height: 45px;
-    }
-
-    .group {
-        width: 100%;
-    }
-
-    .imagem_lateral {
-        display: none;
-    }
-
-    .icon{
-        display: none;
     }
 }
 
 @media (max-width: 480px) {
-    .logo_name h1 {
-        font-size: 20px;
-    }
-
-    form h1 {
-        font-size: 26px;
-    }
-
-    form p {
-        font-size: 14px;
-    }
-
-    .input {
-        width: 100%;
-        padding: 0 1rem;
-        font-size: 14px;
-    }
-
-    .conteiner_button .dont_have_account {
-        font-size: 14px;
-    }
-
-    .imagem_lateral {
-        width: 80%;
-        margin-top: 20px;
-    }
-
     .general_conteiner {
-        padding: 0 2%;
-    }
-
-    .imagem_lateral {
-        display: none;
-    }
-    
-    .icon{
-        display: none;
-    }
-}
-
-@media (min-width: 800px) and (max-width: 1280px) {
-    .general_conteiner {
-        width: 75%;
-        height: 80%;
-        padding: 0 4%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        width: 95%;
+        padding: 15px;
+        margin: 0 auto;
+        height: auto;
     }
 
     .logo_name {
-        margin-left: 0;
-        margin-top: 10px;
-        margin-bottom: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .logo_name h1 {
-        font-size: 28px;
-        padding-left: 0;
-        margin-right: 10%;
-    }
-
-    .conteiner_content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-wrap: wrap;
-        width: 100%;
+        margin-top: 10%;
+        margin-bottom: 5%;
     }
 
     form {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        margin-left: 0;
-        margin-top: 20px;
-        padding: 0 4%;
-        max-width: 500px;
+        width: 90%;
+        margin: 0 auto;
     }
 
     form h1 {
-        font-size: 28px;
-        font-family: "Poppins", sans-serif;
-        font-weight: bold;
-        color: #F49FC8;
-        margin-bottom: 10px;
+        font-size: 24px;
     }
 
     form p {
-        font-size: 16px;
-        font-weight: 500;
-        margin: 10px 0 20px 0;
-        font-weight: 200;
-        font-family: "Poppins", sans-serif;
+        font-size: 12px;
     }
 
     .input {
         width: 100%;
-        height: 45px;
-        padding: 0 3rem;
-        font-size: 16px;
-        margin-bottom: 15px;
+        padding-left: 1.5rem;
     }
 
     .imagem_lateral {
         display: none;
     }
 
-    button {
-        height: 50px;
-        margin-top: 15px;
+    .icon {
+        display: none;
     }
 
     .conteiner_button {
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
+        margin-top: 20px;
     }
-    
-    .icon{
+}
+
+@media (max-width: 1280px) and (min-width: 1024px) {
+    .general_conteiner {
+        width: 70%;
+        margin: 0 auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo_name {
+        margin-top: 8%;
+        margin-bottom: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .conteiner_content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagem_lateral {
         display: none;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .conteiner_button {
+        margin-top: 20px;
     }
 }

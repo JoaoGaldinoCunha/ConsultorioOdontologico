@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificão de autenticação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <section>
+        <div class="general_conteiner">
+            <div class="logo_name">
+                <img src="../assets/img/logo.svg">
+                <h1>LOGO EMPRESA</h1>
+            </div>
+            <div class="conteiner_content">
+                <form>
+                    <div class="back_login">
+                        <img src="../assets/img/chevron_back_forgotPassword.svg" alt=""  onclick="window.location.href='../login/login.html'" class="back_img">
+                        <span  onclick="window.location.href='../login/login.html'">Voltar para ínicio</span>
+                    </div>
+
+                    <h1>VERIFIQUE O CÓDIGO</h1>
+                    <p>O codigo foi enviado pelo <span> EMAIL</span></p>
+                    <div class="group">
+                        <img src="../assets/img/shield_solid.svg" alt="" class="icon">
+                        <input class="input" type="text" placeholder="Insira o código">
+                    </div>
+                    <p class="dont_have_account">Não recebeu o código? <span onclick="window.location.href='../register/register.html'">Reenvie</span></p>
+                    <div class="conteiner_button">
+                        <button onclick="window.location.href='../newPassword/newPassword.html'">Recuperar Senha</button>
+                    </div>
+                </form>
+                <div>
+                    <img src="../assets/img/verifyCode.svg" class="imagem_lateral" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

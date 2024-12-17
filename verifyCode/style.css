@@ -1,0 +1,385 @@
+/* Definição de variáveis para cores e fontes */
+:root {
+    --primary-color: #F49FC8;
+    --secondary-color: #F07BAA;
+    --background-color: #ffffff;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Red Hat Display', sans-serif;
+    --border-color: #dfe6ec;
+    --text-color: #0d0c22;
+    --placeholder-color: #94a3b8;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Reset e propriedades globais */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none; /* Desabilita a seleção de texto */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+img {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-drag: none; /* Desabilita o arraste da imagem */
+    -webkit-user-drag: none;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: var(--font-primary), sans-serif; /* Definir fonte primária para o corpo */
+}
+
+section {
+    background-image: url('../assets/img/fund_consultorio.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.general_conteiner {
+    background-color: var(--background-color);
+    width: 70%;
+    height: 80%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.logo_name {
+    margin-left: 5%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.logo_name h1 {
+    color: var(--primary-color);
+    font-weight: bolder;
+    font-family: var(--font-secondary), sans-serif;
+    padding-left: 1%;
+}
+
+.conteiner_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    text-align: justify;
+    width: 40%;
+}
+
+form h1 {
+    font-size: 30px;
+    font-family: var(--font-primary), sans-serif;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+form p {
+    font-size: 16px;
+    font-weight: 200;
+    margin: 2% 0% 8% 0%;
+    font-family: var(--font-primary), sans-serif;
+}
+
+/* Melhorar a usabilidade do botão de voltar */
+.back_login {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.back_img {
+    cursor: pointer;
+}
+
+.group {
+    display: flex;
+    line-height: 30px;
+    align-items: center;
+    position: relative;
+    margin: 0;
+}
+
+.input {
+    width: 130%;
+    height: 45px;
+    padding-left: 3rem;
+    padding-right: 5rem;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--border-color);
+    color: var(--text-color);
+    transition: 0.5s ease;
+}
+
+.input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.input:focus,
+.input:hover {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: #fff;
+    box-shadow: 0 0 0 5px var(--primary-color);
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: none;
+    width: 1rem;
+    height: 1rem;
+}
+
+.conteiner_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dont_have_account {
+    font-weight: 500;
+    font-size: 16px;
+    font-family: var(--font-primary), sans-serif;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    width: 100%;
+    height: 50px;
+    border-style: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.conteiner_button p {
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+span {
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-primary), sans-serif;
+    font-size: 16px;
+}
+
+.imagem_lateral {
+    width: 70%;
+    height: 70%;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .general_conteiner {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .logo_name {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        justify-content: center;
+    }
+
+    form {
+        width: 60%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .conteiner_content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagem_lateral {
+        display: none;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .conteiner_button {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .general_conteiner {
+        width: 90%;
+        padding: 20px;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    form h1 {
+        font-size: 30px;
+    }
+
+    form p {
+        font-size: 14px;
+    }
+
+    .input {
+        width: 80%;
+        padding-left: 2rem;
+    }
+
+    .imagem_lateral {
+        display: none;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .conteiner_button {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .general_conteiner {
+        width: 95%;
+        padding: 15px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    form h1 {
+        font-size: 24px;
+    }
+
+    form p {
+        font-size: 12px;
+    }
+
+    .input {
+        width: 100%;
+        padding-left: 1.5rem;
+    }
+
+    .imagem_lateral {
+        display: none;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .conteiner_button {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .general_conteiner {
+        width: 80%; /* A largura do contêiner já está bem ajustada */
+        height: auto;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    form {
+        width: 60%; /* Mantém o formulário com 60% da largura */
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .input {
+        width: 80%; /* Ajuste a largura do input */
+        padding-left: 2rem;
+        margin: 0 auto; /* Centraliza o input */
+    }
+
+    .imagem_lateral {
+        display: none; /* Esconde a imagem lateral */
+    }
+
+    .icon {
+        display: none; /* Esconde o ícone */
+    }
+
+    .conteiner_button {
+        margin-top: 20px; /* Espaçamento do botão */
+    }
+}
+
+
+@media (max-width: 1280px) and (min-width: 1024px) {
+    .general_conteiner {
+        width: 70%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .logo_name {
+        margin-top: 8%;
+        margin-bottom: 5%;
+    }
+
+    form {
+        width: 60%;
+        text-align: center;
+    }
+
+    .conteiner_content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagem_lateral {
+        display: none;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .conteiner_button {
+        margin-top: 20px;
+    }
+}
